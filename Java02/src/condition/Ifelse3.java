@@ -59,13 +59,15 @@ public class Ifelse3 {
 		
 		int year = 0;
 		
-		System.out.print("년도를 입력하세요: ");
-		year = sc.nextInt();
+		System.out.print("년도를 입력하세요: "); 
+		year = sc.nextInt();						// 사용자에게 int 값을 입력받고 year에 담기!
 		
 		if ((year % 4) == 0 &&  (year % 100) != 0 || (year % 400) == 0) {
 			System.out.println("윤년입니다");
 		} else {
 			System.out.println("윤년이 아닙니다");
 		}	
+		sc.close();					// 프로그램 성능을 느려지게 할 수 있는 자원을 해제
+		// 지금은 main 함수가 종료되면 자동으로 해제되기 때문에 지금은 안해도 됨
 	}
 }
